@@ -54,3 +54,6 @@ tab3 终端，主要还原攻击者执行过的所有命令
 # 感谢
 
 [https://github.com/ba0gu0/behinder-decryptor](https://github.com/ba0gu0/behinder-decryptor "https://github.com/ba0gu0/behinder-decryptor")
+
+## Stargazers over time
+[![Stargazers over time](https://starchart.cc/intbjw/webshell-decryptor.svg?variant=adaptive)](https://starchart.cc/intbjw/webshell-decryptor)
