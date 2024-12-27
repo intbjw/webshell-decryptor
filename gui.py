@@ -8,7 +8,7 @@ import ttkbootstrap as ttk
 from tkinter import messagebox
 import threading
 import time
-
+import asyncio
 from util.jsonReader import getJsonData
 from util.pcapReader import pcapRead
 import traceback
@@ -177,23 +177,35 @@ def show_result_window(parent):
 def startAnalysis():
     def run_analysis():
         try:
+            # 创建进度窗口
             progress_win, progress_bar = show_progress_window(win)
-            time.sleep(1)  # Simulate analysis time
+            time.sleep(1)  # 模拟分析时间
+
+            # 创建新的事件循环并将其绑定到当前子线程
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)  # 将事件循环绑定到当前线程
+
+            # 运行 pcapRead 函数
             pcapRead(pcapName.get(), url_str.get(), key_str.get(), script_type.get(), 'aes')
+
+            # 完成分析，停止进度条并关闭进度窗口
             progress_bar.stop()
             progress_win.destroy()
+
+            # 弹出完成消息
             messagebox.showinfo("完成", "分析完成")
-            # 生成一个子的窗口
+
+            # 生成一个新的结果窗口
             win.after(0, show_result_window, win)
 
-
-        except:
+        except Exception as e:
+            # 错误处理
             progress_win.destroy()
-            # 打印错误信息
             traceback.print_exc()
-
+            messagebox.showerror("错误", f"分析过程中出现错误: {e}")
             exit(1)
 
+    # 使用 threading 创建子线程
     threading.Thread(target=run_analysis).start()
 
 
